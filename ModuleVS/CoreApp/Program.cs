@@ -9,25 +9,12 @@ namespace CoreApp
         {
             try
             {
-                if (args == null)
-                {
-                    throw new NullReferenceException("Input argument is null");
-                }
-
                 if (args.Length == 0 || args.Length > 1)
                 {
-                    throw new ArgumentOutOfRangeException($"Incorrect parameter {nameof(args)}");
+                    throw new ArgumentOutOfRangeException($"{nameof(args)}");
                 }
 
                 OutputGreeting(args[0]);
-            }
-            catch (NullReferenceException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                Console.WriteLine(e.Message);
             }
             catch (Exception e)
             {

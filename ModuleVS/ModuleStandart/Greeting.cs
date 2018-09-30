@@ -19,9 +19,7 @@ namespace ModuleStandart
                 throw new NullReferenceException("Enter correct name!");
             }
 
-            var currentTime = DateTime.Now.TimeOfDay;
-
-            return $"{currentTime} Hello {name}";
+            return $"{DateTime.Now.TimeOfDay} Hello {name}";
         }
     }
 }
